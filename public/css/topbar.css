@@ -1,0 +1,175 @@
+:root{
+    --bgcolor: #000000;
+    --text-color-1: #ffffff;
+    --text-color-2: #D3D3D3;
+}
+html,body{
+    overscroll-behavior: none;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bgcolor);
+    margin: 0;
+    padding: 0;
+    height: auto;
+    width: auto;
+    
+    
+}
+header{
+    width: 100%;
+    display: flex;
+    padding: 0%;
+}
+
+
+/* header */
+.header{
+    /* border: 2px solid white; */
+    display: flex;
+    /* justify-content: space-between; */
+    max-height: 10vh;
+    width: 100%;
+    padding: 15px 5px;
+}
+
+
+/* logo */
+.logo{
+    height: 100%;
+}
+
+.logo img{
+    position: relative;
+    height: 100%;
+    object-fit: contain;
+    
+}
+
+
+
+/*desktop-menu */
+.topbar-menu{
+    /* border: 2px solid white; */
+    align-self: center;
+    justify-self: center;
+    /* gap: 8%; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    /* border: 1px solid wheat; */
+    margin: 0 30%;
+    
+
+
+}
+#logout{
+    /* border: 2px solid white; */
+}
+.menu-items{
+    position: relative;
+    font-size: .8em;
+    margin: 0 8%;
+    font-family: 'Nanum Gothic';
+    
+
+
+}
+
+.menu-items a{
+    color: var(--text-color-1);
+    text-decoration: none;
+    
+}
+
+
+
+/* icons */
+.menu-icons{
+    /* border: 2px solid white; */
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    right: 2%;
+    top: 5%;
+    font-size: 1.5em;
+    overflow: visible;
+}
+
+.icons{
+    /* border: 2px solid white; */
+    margin: 10px;
+    padding: 10px;
+    
+    
+}
+
+.icons a{
+    color: #ffffff;
+}
+.user-ic{
+    display: inline-block;
+    position: relative;
+}
+.user-icons {
+    display: none;
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    /* transform: translate(50%, -50%); */
+}
+
+.user-icon1, .user-icon2, .user-icon3 {
+    position: absolute;
+    opacity: 0;
+    transition: opacity 2s, transform 2s;
+}
+
+.user-icon1.show, .user-icon2.show, .user-icon3.show {
+    opacity: 1;
+    display: block;
+    
+}
+
+.user-icon1 {
+    transform: translate(0%, -0%) rotate(45deg);
+    /* transform: translate(-50px, -70px) rotate(0); */
+}
+
+.user-icon2 {
+    transform: translate(0%, -0%) rotate(90deg);
+    /* transform: translate(-90px, -30px) rotate(0); */
+}
+
+.user-icon3 {
+    transform: translate(0%, -0%) rotate(135deg);
+    /* transform: translate(-50px, 10px) rotate(0); */
+}
+
+.user-icon1.show {
+    transform: translate(-50px, -50px) rotate(0);
+}
+
+.user-icon2.show {
+    transform: translate(-80px, -10px) rotate(0);
+}
+
+.user-icon3.show {
+    transform: translate(-50px, 40px) rotate(0);
+}
+
+
+@media (max-width: 769px) {
+    .topbar-menu {
+      /* border: 1px solid white; */
+      margin: 0;
+    }
+    .header{
+        height: 5vh;
+    }
+   
+  }
